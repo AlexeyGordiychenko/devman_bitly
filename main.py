@@ -1,8 +1,9 @@
+import argparse
 import os
 import requests
-from urllib.parse import urlparse
-import argparse
+
 from dotenv import load_dotenv
+from urllib.parse import urlparse
 
 
 def shorten_link(token, url):
@@ -35,7 +36,6 @@ def is_bitlink(url, token):
 
 
 def main():
-
     load_dotenv()
     parser = argparse.ArgumentParser(
         description='Shorten the given URL or count clicks if the given URL is a short URL')
