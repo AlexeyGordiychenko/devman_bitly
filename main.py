@@ -34,7 +34,15 @@ def is_bitlink(url, token):
     return response.ok
 
 
-def main(url):
+def main():
+
+    load_dotenv()
+    parser = argparse.ArgumentParser(
+        description='Shorten the given URL or count clicks if the given URL is a short URL')
+    parser.add_argument('link', help='link')
+    args = parser.parse_args()
+    url = args.link
+
     token = os.environ['BITLY_TOKEN']
     if is_bitlink(url, token):
 
@@ -54,9 +62,4 @@ def main(url):
 
 
 if __name__ == '__main__':
-    load_dotenv()
-    parser = argparse.ArgumentParser(
-        description='Shorten the given URL or count clicks if the given URL is a short URL')
-    parser.add_argument('link', help='link')
-    args = parser.parse_args()
-    main(args.link)
+    main()
