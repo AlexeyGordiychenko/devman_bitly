@@ -2,6 +2,7 @@ import os
 import requests
 from urllib.parse import urlparse
 import argparse
+from dotenv import load_dotenv
 
 
 def shorten_link(token, url):
@@ -53,6 +54,7 @@ def main(url):
 
 
 if __name__ == '__main__':
+    load_dotenv()
     parser = argparse.ArgumentParser(
         description='Shorten the given URL or count clicks if the given URL is a short URL')
     parser.add_argument('link', help='link')
