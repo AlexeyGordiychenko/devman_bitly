@@ -39,7 +39,7 @@ def main(url):
 
         try:
             bitlink = count_clicks(token, url)
-            print('Кликов', bitlink)
+            print('Clicks', bitlink)
         except requests.exceptions.HTTPError:
             print('Couldn\'t count clicks for the link')
 
@@ -47,7 +47,7 @@ def main(url):
 
         try:
             bitlink = shorten_link(token, url)
-            print('Битлинк', bitlink)
+            print('Bitlink', bitlink)
         except requests.exceptions.HTTPError:
             print('Couldn\'t create a bitlink')
 
