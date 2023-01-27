@@ -13,7 +13,10 @@ If the given URL is a biltly link then the program will display the number of cl
 
 If it's not a bitly link then the program will try to shorten it with bitly API. After that the program will display the short link for you to use.
 
-
+Example:
+```
+python main.py https://github.com
+```
 ### How to install
 
 
